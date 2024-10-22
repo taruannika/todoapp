@@ -4,6 +4,8 @@
   "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
   "main": "index.js",
   "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -17,5 +19,8 @@
     "express-async-handler": "^1.2.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.7.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
   }
 }
