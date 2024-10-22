@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
+const validator = require("validator");
 
 const userSchema = new mongoose.Schema(
   {
@@ -19,7 +20,7 @@ const userSchema = new mongoose.Schema(
       required: [true, "Password is required"],
       validate: {
         validator: function (value) {
-          return this.validator.isStrongPassword(value, {
+          return validator.isStrongPassword(value, {
             minlength: 8,
             minLowercase: 1,
             minUppercase: 1,

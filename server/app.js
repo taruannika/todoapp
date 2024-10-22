@@ -5,6 +5,7 @@ const cookieParser = require("cookie-parser");
 const connect = require("./db/connect");
 
 const authRoutes = require("./routes/auth.routes");
+const errorHandler = require("./middleware/errorHandler");
 
 const { CORS_OPTIONS } = require("./utils/config");
 
@@ -20,5 +21,8 @@ app.use(cookieParser());
 
 // routes
 app.use("/api/auth", authRoutes);
+
+// errorHandler
+app.use(errorHandler);
 
 module.exports = app;
