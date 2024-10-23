@@ -59,6 +59,10 @@ userSchema.set("toJSON", {
   },
 });
 
+userSchema.methods.checkPassword = async function (password) {
+  return await bcrypt.compare(password, this.password);
+};
+
 const User = mongoose.model("User", userSchema);
 
 module.exports = User;
