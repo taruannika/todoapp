@@ -1,3 +1,9 @@
+import RegisterPage from "./pages/RegisterPage";
+
 export default function App() {
-  return <div>App</div>;
+  return (
+    <div>
+      <RegisterPage />
+    </div>
+  );
 }
